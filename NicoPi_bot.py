@@ -8,7 +8,7 @@ def handle(msg):
 
         #Log su shell
         print 'Ricevuto comando: %s' % command,"da:", username
-        if username == "SOSTITUIRE COL PROPRIO USERNAME":
+        if username == "SOSTITUIRE COL PROPRIO USERNAME SENZA @":
                 if command == '/temp':
                         sensor = Adafruit_DHT.DHT11 #imposto il tipo di sensore
                         pin=4 #prelevo i dati dalla GPIO4
