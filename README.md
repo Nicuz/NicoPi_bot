@@ -25,7 +25,7 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/usr/bin/python /home/UTENTE/NOME_FILE.py > /home/UTENTE/NOME_FILE.log 2>&1
+ExecStart=/usr/bin/python /home/UTENTE/NOME_FILE.py >
 
 [Install]
 WantedBy=multi-user.target
