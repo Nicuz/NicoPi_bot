@@ -1,21 +1,21 @@
 # NicoPi_bot
 Semplice Bot casalingo per conoscere la temperatura e l'umidità di un ambiente interno con l'utilizzo di un sensore DHT11.
 
-*Cablaggio:*
+**Cablaggio:**
 ```
 + > 3.3V
 - > GND
 data > GPIO4
 ```
 
-*Requisiti:*
+**Requisiti:**
 * Adafruit_DHT
 * telepot
 
 **Come avviarlo in background con systemd**
 
 Creare il file di configurazione lanciando:
-'sudo nano /lib/systemd/system/NOME.service'
+`sudo nano /lib/systemd/system/NOME.service`
 
 Inserire all'interno del file:
 ```
@@ -31,7 +31,7 @@ ExecStart=/usr/bin/python /home/UTENTE/NOME_FILE.py
 WantedBy=multi-user.target
 ```
 Dare i permessi al file:
-'sudo chmod 644 /lib/systemd/system/NOME.service'
+`sudo chmod 644 /lib/systemd/system/NOME.service`
 
 Ricarichiamo i demoni e abilitiamo quello appena creato:
 ```
@@ -39,7 +39,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable NOME.service
 ```
 Avviamo il nostro demone:
-'sudo systemctl start NOME.service'
+`sudo systemctl start NOME.service`
 
 Controlliamo lo stato:
-'sudo systemctl status NOME.service'
+`sudo systemctl status NOME.service`
