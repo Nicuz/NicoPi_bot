@@ -9,11 +9,11 @@ def on_chat_message(msg):
         username = msg['chat']['username'] #prelevo username del mittente
 
         def temperatura():
-                sensor = Adafruit_DHT.DHT11
+                sensor = Adafruit_DHT.DHT22
                 pin=4
                 humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
                 if humidity is not None and temperature is not None:
-                        bot.sendMessage(chat_id, ("Temperatura: {0:0.1f}*C\nUmidità: {1:0.1f}%".format(temperature, humidity)))
+                        bot.sendMessage(chat_id, ("Temperatura: {0:0.1f}°C\nUmidità: {1:0.1f}%".format(temperature, humidity)))
 
         def comando_shell(): #funzione che invia un messaggio contenente l'output di un comando lanciato
                 proc = subprocess.Popen([command[1:]],stdout=subprocess.PIPE, shell=True)
