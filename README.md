@@ -1,5 +1,5 @@
 # NicoPi_bot
-Semplice Bot casalingo per conoscere la temperatura e l'umidità di un ambiente interno con l'utilizzo di un sensore DHT11.
+Semplice Bot casalingo per conoscere la temperatura e l'umidità di un ambiente interno con l'utilizzo di un sensore DHT11/DHT22.
 
 ![alt tag](https://github.com/Nicuz/NicoPi_bot/blob/master/nicopibot.png)
 
